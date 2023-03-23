@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.weather-app {
+  background-image: linear-gradient(#184CBF, #0D5976);
   min-height: 100vh;
+  color: #fff;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  width: 80%;
+  min-height: 100%;
+}
+
+.weather-app .logo {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-app .logo h1 {
+  margin: auto;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.weather-app .logo h1 svg {
+  height: 40px;
+  width: 40px;
+}
+
+.input-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  height: 50px;
+  width: 80%;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.input-container input {
+  width: 100%;
+  height: 70%;
+  outline: none;
+  border: none;
+  margin-left: 5px;
+}
+
+.input-container svg {
+  height: 30px;
+  width: 30px;
+}
+
+.input-container svg:first-child {
+  margin-left: 10px;
+}
+
+.input-container svg:last-child {
+  height: 25px;
+  width: 25px;
+}
+
+.input-container button {
+  height: 100%;
+  width: 150px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: green;
+  color: #ffffff;
+}
+
+.time-section {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+
+
+.today-section .country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.today-section .country h3 {
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+
+.today-section .country p {
+  font-size: 1.4rem;
+}
+
+.today-section .info-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.today-section .info-container div:nth-child(1) img {
+  height: 110px;
+  width: 110px;
+
+}
+
+.today-section .info-container div:nth-child(2) p {
+  font-size: 2.2rem;
+  font-weight: 700;
+
+}
+
+.today-section .info-container div:nth-child(3) p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.today-section .info-container div:nth-child(3) p svg {
+  height: 20px;
+  width: 20px;
+
+}
+
+.down-weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.down-weather-info div {
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+.down-weather-info div p {
+  font-style: 1.2rem;
+
+}
+
+.down-weather-info div svg {
+  height: 30px;
+  width: 30px;
+
+}
+
+.today-pordcust h6 {
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+
+.today-pordcust div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+
+.today-pordcust .daily-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+.today-pordcust .daily-info p {
+  margin: 0;
+  padding: 0;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.today-pordcust .daily-info img {
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  width: 60px;
+
+}
+
+.weeken-container {
+  display: grid;
+  gap: 10px
+}
+
+.weeken-container div div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.weeken-container div h6 {
+  display: block;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #fff;
+  padding: 0px;
+  padding-bottom: 5px;
+  margin: 0px;
+}
+
+.weeken-container div .daily-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.weeken-container div .daily-info img {
+  height: 80px;
+  width: 80px;
+  margin: 0;
+}
+
+.weeken-container div .daily-info p {
+  margin: 0px;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+}
+
+.error p{ 
+  font-size: 1.5re;
+  font-weight: 800;
+  color: yellow;
 }
